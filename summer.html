@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<title>summer clothes</title>
+</head>
+<body>
+	        <h1 style=" font-size: 7vh; text-align: left;margin: 0;font-family: inherit;">
+			MEHDIL
+		</h1><hr>
+		<h2 style="text-align:center;">Summer Clothes Collection</h2><hr>
+<div class="dropdown-content" >
+    <a href="project.html" style="color:black;font-size:3vh;padding-left:140px;">home</a>
+    <a href="winter.html" style="color:black;font-size:3vh;padding-left:150px;">Winter Clothes</a>
+    <a href="summer.html" style="color:black;font-size:3vh;padding-left:150px;">Summer Clothes</a>
+    <a href="kids.html" style="color:black;font-size:3vh;padding-left:150px;">kids Clothes</a>
+    <a href="footwear.html" style="color:black;font-size:3vh;padding-left:150px;">footwear</a>
+ 	 </div><hr>
+
+                  <style>
+                     .product {
+                     display: flex;            
+                     justify-content: center;   
+                     gap: 20px;                 
+                    flex-wrap: wrap;         
+                    }
+                    .item img {
+                    width: 300px;              
+                    display: block;
+                    margin-bottom: 10px;   
+                    }
+
+                    .item p {
+                    margin: 2px 0;
+                    font-size: 16px;
+        }
+                </style>
+    <div class="product">
+	<div class="item">
+        <img src="s1.jpg.jpeg" alt="Summer Clothes" style="margin: 5px;width: 300px;" onclick="addToCart('2pc suit', 15000, 's1.jpg.jpeg')"
+     style="cursor:pointer;">
+        <p>2pc suit</p>
+        <p>PKR 15,000</p>
+	</div>
+	<div class="item">
+        <img src="s2.jpg.jpeg" alt="Summer Clothes"style="margin: 5px;width: 300px;" onclick="addToCart('white 2pc suit', 9000, 's2.jpg.jpeg')"
+     style="cursor:pointer;">
+        <p>white 2pc suit</p>
+        <p>PKR 9,000</p>
+        </div>
+	<div class="item">
+        <img src="s3.jpg.jpeg" alt="Summer Clothes"style="margin: 5px;width: 300px;" onclick="addToCart('3pc suit', 14500, 's3.jpg.jpeg')"
+     style="cursor:pointer;">
+        <p>3pc suit</p>
+        <p>PKR 14,500</p>
+	</div>
+	<div class="item">
+        <img src="s4.jpg.jpeg" alt="Summer Clothes"style="margin: 5px;width: 300px;" onclick="addToCart('yellow shirt', 6500, 's4.jpg.jpeg')"
+     style="cursor:pointer;">
+        <p>yellow shirt</p>
+        <p>PKR 6,500</p>
+	</div>
+
+    </div>
+<script>
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ name: name, price: price, image: image });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart");
+    window.location.href = "cart.html";
+}
+</script>
+</body>
+</html>

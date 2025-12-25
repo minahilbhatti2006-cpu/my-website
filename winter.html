@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<title>winter clothes</title>
+</head>
+<body>
+	        <h1 style=" font-size: 7vh; text-align: left;margin: 0;font-family: inherit;">
+			MEHDIL
+		</h1><hr>
+		<h2 style="text-align:center;">Winter Clothes Collection</h2><hr>
+<div class="dropdown-content">
+     <a href="project.html" style="color:black;font-size:3vh;padding-left:140px;">home</a>
+    <a href="winter.html" style="color:black;font-size:3vh;padding-left:150px;">Winter Clothes</a>
+    <a href="summer.html" style="color:black;font-size:3vh;padding-left:150px;">Summer Clothes</a>
+    <a href="kids.html" style="color:black;font-size:3vh;padding-left:150px;">kids Clothes</a>
+    <a href="footwear.html" style="color:black;font-size:3vh;padding-left:150px;">footwear</a>
+ 	 </div><hr>
+
+                  <style>
+                     .product {
+                     display: flex;            
+                     justify-content: center;   
+                     gap: 20px;                 
+                    flex-wrap: wrap;         
+                    }
+                    .item img {
+                    width: 300px;              
+                    display: block;
+                    margin-bottom: 10px;   
+                    }
+
+                    .item p {
+                    margin: 2px 0;
+                    font-size: 16px;
+        }
+                </style>
+    <div class="product">
+	<div class="item">
+        <img src="winter.jpg" alt="Winter Clothes" style="margin: 5px;width: 300px;" onclick="addToCart('Orange Jacket', 5000, 'winter.jpg')"
+     style="cursor:pointer;">
+        <p>Orange Jacket</p>
+        <p>PKR 5,000</p>
+	</div>
+	<div class="item">
+        <img src="winter1.jpg" alt="Winter Clothes"style="margin: 5px;width: 300px;" onclick="addToCart('white Coat', 6000, 'winter1.jpg')"
+     style="cursor:pointer;">
+        <p>white Coat</p>
+        <p>PKR 6,000</p>
+        </div>
+	<div class="item">
+        <img src="winter2.jpg" alt="Winter Clothes"style="margin: 5px;width: 300px;" onclick="addToCart('brown jacket', 4000, 'winter2.jpg')"
+     style="cursor:pointer;">
+        <p>brown jacket</p>
+        <p>PKR 4,500</p>
+	</div>
+    </div>
+<script>
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ name: name, price: price, image: image });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart");
+    window.location.href = "cart.html";
+}
+</script>
+</body>
+</html>
+	    

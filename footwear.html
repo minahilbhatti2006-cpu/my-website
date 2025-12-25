@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<title>footwear</title>
+</head>
+<body>
+	        <h1 style=" font-size: 7vh; text-align: left;margin: 0;font-family: inherit;">
+			MEHDIL
+		</h1><hr>
+		<h2 style="text-align:center;">footwear</h2><hr>
+<div class="dropdown-content">
+    <a href="project.html" style="color:black;font-size:3vh;padding-left:140px;">home</a>
+
+    <a href="winter.html" style="color:black;font-size:3vh;padding-left:150px;">Winter Clothes</a>
+    <a href="summer.html" style="color:black;font-size:3vh;padding-left:150px;">Summer Clothes</a>
+    <a href="kids.html" style="color:black;font-size:3vh;padding-left:150px;">kids Clothes</a>
+    <a href="footwear.html" style="color:black;font-size:3vh;padding-left:150px;">footwear</a>
+ 	 </div><hr>
+
+                  <style>
+                     .product {
+                     display: flex;            
+                     justify-content: center;   
+                     gap: 20px;                 
+                    flex-wrap: wrap;         
+                    }
+                    .item img {
+                    width: 300px;              
+                    display: block;
+                    margin-bottom: 10px;   
+                    }
+
+                    .item p {
+                    margin: 2px 0;
+                    font-size: 16px;
+        }
+                </style>
+    <div class="product">
+	<div class="item">
+        <img src="f1.jpg" alt="footwear" style="margin: 5px;width: 300px;" onclick="addToCart('brown wool shoes', 8000, 'f1.jpg')"
+     style="cursor:pointer;">
+        <p>brown wool shoes</p>
+        <p>PKR 8,000</p>
+	</div>
+	<div class="item">
+        <img src="f2.jpg" alt="footwear"style="margin: 5px;width: 300px;" onclick="addToCart('pink shoes', 7000, 'f2.jpg')"
+     style="cursor:pointer;">
+        <p>pink shoes</p>
+        <p>PKR 7,000</p>
+        </div>
+	<div class="item">
+        <img src="f3.jpg" alt="footwear"style="margin: 5px;width: 300px;" onclick="addToCart('black winter shoes', 7500, 'f3.jpg')"
+     style="cursor:pointer;">
+        <p>black winter shoes</p>
+        <p>PKR 7,500</p>
+	</div>
+	<div class="item">
+        <img src="f4.jpg" alt="footwear"style="margin: 5px;width: 300px;" onclick="addToCart('black long shoes', 9500, 'f4.jpg')"
+     style="cursor:pointer;">
+        <p>black long shoes</p>
+        <p>PKR 9,500</p>
+	</div>
+	<div class="item">
+        <img src="f5.jpg" alt="footwear"style="margin: 5px;width: 300px;" onclick="addToCart('white coat shoes', 8500, 'f5.jpg')"
+     style="cursor:pointer;">
+        <p>white coat shoes</p>
+        <p>PKR 8,500</p>
+	</div>
+
+    </div>
+<script>
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ name: name, price: price, image: image });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart");
+    window.location.href = "cart.html";
+}
+</script>
+</body>
+</html>
